@@ -9,5 +9,8 @@ import com.example.practice.projectUno.dto.BookDto;
 public interface BookRepository extends JpaRepository<BookDto, Integer> {
   BookDto findByName(String name);
 
-  List<BookDto> findByReturnStatusFalse();
+  List<BookDto> findByReturnStatus(Boolean bool);
+
+  BookDto addBook(BookDto bookDto);
+
 }
